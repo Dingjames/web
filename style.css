@@ -1,0 +1,340 @@
+@charset "UTF-8";
+.soc-media a, .col-3 img, .post, header label, .nav a, .nav, button {
+  transition: all 0.25s;
+}
+
+/*Typography*/
+body {
+  font: 300 16px "Roboto", "Lato", sans-serif;
+}
+
+/*Layout*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+section,
+footer {
+  width: 100%;
+}
+
+.row {
+  margin: auto;
+  width: 100%;
+  max-width: 60em;
+  /*960px*/
+}
+.row:first-child {
+  padding-top: 3em;
+}
+.row:last-child {
+  padding-bottom: 3em;
+}
+
+.col-3,
+.col-2 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.col-3 {
+  width: 280px;
+}
+
+.col-2 {
+  width: 49%;
+}
+
+@media screen and (max-width: 768px) {
+  .col-3,
+.col-2 {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .col-3,
+.col-2 {
+    display: block;
+    margin: auto;
+    width: 80%;
+  }
+}
+.row h1 {
+  margin: 0;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+button {
+  margin-top: 1em;
+  width: 13em;
+  line-height: 2em;
+  text-transform: uppercase;
+  background: #000;
+  color: #fff;
+  border: 0;
+  outline: 0;
+}
+button:focus, button:hover {
+  background: #1a1a1a;
+}
+button:active {
+  background: #080808;
+}
+
+/*Intro*/
+.sec-intro {
+  position: relative;
+}
+
+/*Navigagtion*/
+header input {
+  display: none;
+}
+
+header input:checked + label:before {
+  content: "";
+}
+
+header input:checked ~ nav > .nav {
+  width: 11em;
+  opacity: 10;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 2.9em;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  list-style-type: none;
+  background: #c00;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.nav a {
+  display: block;
+  padding: 0.85em 0;
+  width: 11em;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+.nav a:focus, .nav a:hover {
+  background: #990000;
+}
+.nav a:active {
+  background: #d10000;
+}
+
+header label {
+  display: block;
+  padding: 0.5em;
+  width: 47px;
+  text-align: center;
+  background: #c00;
+  color: #fff;
+  cursor: pointer;
+}
+header label:before {
+  content: "";
+  font: 2em fontAwesome;
+}
+header label:focus, header label:hover {
+  background: #990000;
+}
+header label:active {
+  background: #d10000;
+}
+
+.sec-intro {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(http://www.zeleznakoule.cz/wp-content/uploads/2011/11/kettlebell-graphic.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.sec-intro h1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 10em;
+  height: 3em;
+  font-family: "Black Ops One";
+  line-height: 3em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #c00;
+  cursor: default;
+}
+
+/*About*/
+.sec-about {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  br {
+    display: none;
+  }
+}
+.row-red {
+  background: #c00;
+  color: #fff;
+}
+
+.row-red .row {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.sec-about p {
+  font-size: 0.9em;
+}
+
+.row-grey {
+  background: #111;
+  color: #ddd;
+}
+
+.sec-about .row-grey .row {
+  padding: 3em 0;
+}
+
+.sec-about article {
+  padding: 0 1em;
+}
+
+/*News*/
+.sec-news {
+  text-align: center;
+}
+
+.sec-news .row > h1 {
+  padding-bottom: 0.5em;
+}
+
+.sec-news .col-2 {
+  padding: 1em;
+}
+
+.post {
+  position: relative;
+  height: 245px;
+  cursor: pointer;
+}
+.post:hover {
+  opacity: 0.8;
+}
+
+.post span,
+.post h1,
+.post p {
+  position: absolute;
+}
+
+.post span {
+  padding: 0.25em 0.5em;
+  font-weight: bold;
+  background: #c00;
+  color: #fff;
+  opacity: 0.85;
+}
+
+.post h1 {
+  bottom: 0;
+  padding-left: 0.5em;
+  width: 100%;
+  font-size: 1.15em;
+  line-height: 2em;
+  text-align: left;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.col-2 img {
+  width: 100%;
+  height: 245px;
+}
+
+/*Gallery*/
+.sec-gallery {
+  text-align: center;
+  background: url(http://crossfitdrakkarhondarribia.com/wp-content/uploads/2011/09/crossfit21.jpg) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.sec-gallery h1:first-of-type {
+  padding: 0.5em 0;
+  color: #fff;
+}
+
+.col-3 img {
+  width: 100%;
+  cursor: pointer;
+}
+.col-3 img:hover {
+  /*opacity: .8;*/
+  filter: brightness(50%);
+}
+
+/*Footer*/
+footer {
+  background: #111;
+}
+
+.soc-media {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.soc-media li {
+  margin-right: 1em;
+}
+
+.soc-media a {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #fff;
+}
+.soc-media a:focus, .soc-media a:hover {
+  color: #c00;
+}
+.soc-media a:active {
+  color: #222;
+}
+
+footer p {
+  font-size: 0.85em;
+  text-align: center;
+  color: #aaa;
+}
